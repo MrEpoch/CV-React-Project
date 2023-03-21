@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./src/main.jsx",
   output: {
-    filename: "main.jsx",
+    filename: "bundle.jsx",
     path: path.resolve(__dirname, "build"),
   },
   plugins: [
@@ -19,6 +19,8 @@ module.exports = {
     port: 3333,
     allowedHosts: "all",
   },
+  devtool: false,
+  plugins: [new webpack.EvalSourceMapDevToolPlugin({})],
   module: {
     // exclude node_modules
     rules: [

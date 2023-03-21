@@ -1022,7 +1022,7 @@ var update = injectStylesIntoStyleTag_default()(App/* default */.Z, options);
 
        /* harmony default export */ const src_App = (App/* default */.Z && App/* default.locals */.Z.locals ? App/* default.locals */.Z.locals : undefined);
 
-;// CONCATENATED MODULE: ./src/components/main.jsx
+;// CONCATENATED MODULE: ./src/components/main-body.jsx
 
 function Main() {
   return /*#__PURE__*/React.createElement("main", {
@@ -1153,7 +1153,7 @@ var App_App = /*#__PURE__*/function (_Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Header, null), /*#__PURE__*/React.createElement(Main, null), /*#__PURE__*/React.createElement(Side, null));
+      return /*#__PURE__*/react.React.createElement(react.React.Fragment, null, /*#__PURE__*/react.React.createElement(Header, null), /*#__PURE__*/react.React.createElement(Main, null), /*#__PURE__*/react.React.createElement(Side, null));
     }
   }]);
   return App;

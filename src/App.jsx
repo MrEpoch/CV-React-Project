@@ -1,6 +1,6 @@
-import { Component, useState } from 'react';
+import { Component, useState, React } from 'react';
 import './App.css';
-import Main from "./components/main";
+import Main from "./components/main-body";
 import Side from "./components/side";
 import Header from "./components/header";
 
