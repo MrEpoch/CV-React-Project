@@ -1,69 +1,54 @@
 const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = function(_env, argv) {
-  const isProduction = argv.mode === "production";
-  const isDevelopment = !isProduction;
-
-  return {
-    devtool: isDevelopment && "cheap-module-source-map",
-    entry: "./src/main.jsx",
-    output: {
-      path: path.resolve(__dirname, "dist"),
-      filename: "assets/js/[name].[contenthash:8].jsx",
-      publicPath: "/"
+module.exports = {
+  entry: "./src/main.jsx",
+  output: {
+    filename: "main.jsx",
+    path: path.resolve(__dirname, "build"),
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "public", "index.html"),
+    }),
+  ],
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "build"),
+    },
+    port: 3333,
+    allowedHosts: "all",
+  },
+  module: {
+    // exclude node_modules
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ["babel-loader"],
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: {
+          loader: "url-loader",
+          options: {
+            limit: 8192,
+            name: "static/media/[name].[hash:8].[ext]"
           },
-    module: {
-      rules: [
-        {
-          test: /\.jsx?$/,
-          exclude: /node_modules/,
-          use: {
-            loader: "babel-loader",
-            options: {
-              cacheDirectory: true,
-              cacheCompression: false,
-              envName: isProduction ? "production" : "development"
-            }
-          }
-          },
-        {
-          test: /\.css$/,
-          use: [
-            isProduction ? MiniCssExtractPlugin.loader : "style-loader",
-            "css-loader"
-          ]
-          },
-        {
-          test: /\.(png|jpg|gif)$/i,
-          use: {
-            loader: "url-loader",
-            options: {
-              limit: 8192,
-              name: "static/media/[name].[hash:8].[ext]"
-            }
-          }
         },
-        {
+      },
+      {
           test: /\.svg$/,
           use: ["@svgr/webpack"]
-        }
-      ]
-    },
-    resolve: {
-      extensions: [".js", ".jsx"]
-    },
-    plugins: [
-      isProduction &&
-    new MiniCssExtractPlugin({
-      filename: "assets/css/[name].[contenthash:8].css",
-      chunkFilename: "assets/css/[name].[contenthash:8].chunk.css"
-      }),
-            new HtmlWebpackPlugin({
-              template: path.resolve(__dirname, "public/index.html"),
-              inject: true
-      })
-    ].filter(Boolean)
-  };
+      }
+    ]
+  },
+  // pass all js files through Babel
+  resolve: {
+    extensions: ["*", ".js", ".jsx"],
+  },
 };
