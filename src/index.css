@@ -4,10 +4,13 @@
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@600&display=swap');
 
 :root {
     --anton-font: 'Anton', sans-serif;
+    --dancing-font: 'Dancing Script', cursive;
+    --header-dark-green: #33bdb2;
+    --main-color: #99f6e4;
 }
 
 html {
@@ -24,15 +27,7 @@ body {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template: 1fr 4fr / 1fr 4fr; 
+    grid-template-rows: 25% 75% 25%;
 }
 
-.side-react {
-    grid-area: 2 / 1 / 3 / 2;
-    background-color: lightcoral;
-}
 
-.main-react {
-    grid-area: 2 / 2 / 3 / 3;
-    background-color: lightgreen;
-}

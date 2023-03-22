@@ -1,0 +1,54 @@
+.main-react {
+    font-size: 1.4rem;
+    display: grid;
+    grid-row: 100px repeat(3, 1fr);
+    background-color: var(--main-color);
+    position: relative;
+}
+
+.main-About {
+    grid-row: 2 / 3;
+}
+
+.main-education {
+    grid-row: 3 / 4;
+}
+
+.main-experience {
+    grid-row: 4 / 5;
+}
+
+#main-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-info > p {
+    width: 80%;
+    align-self: center;
+}
+
+#main-info > h2 {
+    font-size: 3rem;
+    padding-left: 10%;
+}
+
+.special-wave{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.special-wave svg {
+    position: relative;
+    display: block;
+    width: calc(143% + 1.3px);
+    height: 86px;
+}
+
+.special-wave .shape-fill {
+    fill: #33BDB2;
+}

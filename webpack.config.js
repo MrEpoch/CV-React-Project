@@ -2,25 +2,27 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  mode: 'development',
   entry: "./src/main.jsx",
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "React CV app",
+      template: path.resolve(__dirname, "template/index.html")
+    }),
+  ],
   output: {
     filename: "bundle.jsx",
     path: path.resolve(__dirname, "build"),
+    clean: true,
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, "public", "index.html"),
-    }),
-  ],
   devServer: {
     static: {
       directory: path.join(__dirname, "build"),
     },
-    port: 3333,
+    port: 3334,
     allowedHosts: "all",
   },
-  devtool: false,
-  plugins: [new webpack.EvalSourceMapDevToolPlugin({})],
+  devtool: 'inline-source-map',
   module: {
     // exclude node_modules
     rules: [
@@ -46,6 +48,13 @@ module.exports = {
       {
           test: /\.svg$/,
           use: ["@svgr/webpack"]
+      },
+      {
+          test: /\.(eot|otf|ttf|woff|woff2)$/,
+          loader: require.resolve("file-loader"),
+          options: {
+            name: "static/media/[name].[hash:8].[ext]"
+          } 
       }
     ]
   },

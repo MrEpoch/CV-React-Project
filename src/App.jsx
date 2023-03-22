@@ -1,8 +1,8 @@
-import { Component, useState, React } from 'react';
+import React,{ Component, useState } from 'react';
 import './App.css';
 import Main from "./components/main-body";
-import Side from "./components/side";
 import Header from "./components/header";
+import Contact from "./components/contact";
 
 export default class App extends Component {
   constructor() {
@@ -14,7 +14,7 @@ export default class App extends Component {
       <>
         <Header />
         <Main />
-        <Side />
+        <Contact />
       </>
     )
   }
