@@ -1,21 +1,13 @@
 .main-react {
     font-size: 1.4rem;
     display: grid;
-    grid-row: 100px repeat(3, 1fr);
+    grid-row: 100px repeat(3, 33.33%);
     background-color: var(--main-color);
     position: relative;
 }
 
 .main-About {
-    grid-row: 2 / 3;
-}
-
-.main-education {
-    grid-row: 3 / 4;
-}
-
-.main-experience {
-    grid-row: 4 / 5;
+  margin-top: 50px;
 }
 
 #main-info {
@@ -33,6 +25,17 @@
     padding-left: 10%;
 }
 
+#main-info > ul {
+    padding-left: 12%;
+}
+
+#main-info > ul > li {
+    font-weight: bolder;
+    font-family: var(--dancing-font);
+    font-size: 2rem;
+    list-style:symbols(cyclic "\2728");
+}
+
 .special-wave{
     position: absolute;
     top: 0;
@@ -46,7 +49,7 @@
     position: relative;
     display: block;
     width: calc(143% + 1.3px);
-    height: 86px;
+    height: 70px;
 }
 
 .special-wave .shape-fill {

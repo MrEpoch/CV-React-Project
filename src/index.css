@@ -4,11 +4,12 @@
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@600&family=Righteous&display=swap');
 
 :root {
     --anton-font: 'Anton', sans-serif;
     --dancing-font: 'Dancing Script', cursive;
+    --Right-font: 'Righteous', cursive;
     --header-dark-green: #33bdb2;
     --main-color: #99f6e4;
 }

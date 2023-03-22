@@ -11,16 +11,22 @@ export default function Main() {
                     <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
                 </svg>
             </div>
+            <div className="nothing"></div>
             <div id='main-info' className="main-About">
                 <h2>About Me</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A voluptatum doloremque nam! Earum, necessitatibus repudiandae. Vero atque modi tenetur eaque commodi! Saepe molestias debitis dolorum omnis delectus. Voluptatibus, cupiditate nulla!</p>
             </div>
             <div id='main-info' className="main-education">
                 <h2>My education</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A voluptatum doloremque nam! Earum, necessitatibus repudiandae. Vero atque modi tenetur eaque commodi! Saepe molestias debitis dolorum omnis delectus. Voluptatibus, cupiditate nulla!</p>
+                <ul>
+                    <li>High-school</li>
+                    <li>CS50 computer science</li>
+                    <li>Youtube courses around JavaScript and CSS</li>
+                    <li>Odin project</li>
+                </ul>
             </div>
             <div id='main-info' className="main-experience">
-                <h2>Work experience</h2>
+                <h2>Projects i builded</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A voluptatum doloremque nam! Earum, necessitatibus repudiandae. Vero atque modi tenetur eaque commodi! Saepe molestias debitis dolorum omnis delectus. Voluptatibus, cupiditate nulla!</p>
             </div>
 

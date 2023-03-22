@@ -26,8 +26,11 @@
     align-items: center; 
 }
 
+.introduction > h1 {
+    font-family: var(--Right-font);
+}
+
 .introduction > h4 {
     font-family: 'Dancing Script', cursive;
     font-size: 1.7rem;
-
 }
