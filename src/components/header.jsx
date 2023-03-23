@@ -28,7 +28,7 @@ export default function Header() {
             </div>
             <div className="introduction">
                 <h4>I'am</h4>
-                <h1>Mr. Epoch</h1>
+                <h1 className='try'>Mr. Epoch</h1>
                 <div className="intro-h">
                     <h4 ref={el} className='forChange'>Front-end Web developer</h4>
                 </div>

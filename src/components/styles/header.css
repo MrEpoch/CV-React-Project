@@ -26,8 +26,12 @@
     align-items: center; 
 }
 
-.introduction > h1 {
-    font-family: var(--Right-font);
+.introduction > h4 {
+    font-size: 1.5rem;
+}
+
+.introduction > h1{
+    font-family: monospace;
     font-size: 3rem;
 }
 
@@ -36,8 +40,8 @@
 }
 
 .forChange {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.2rem;
+    font-family: monospace;
+    font-size: 1.4rem;
     display: inline-block;
 }
 
@@ -45,14 +49,6 @@
     .introduction {
         grid-column: 4 / 7;
     }
-
-    /* .introduction > h1 {
-        font-size: 2rem;
-    }
-
-    .forChange {
-        font-size: 1.5rem;
-    } */
 }
 
 @media (max-width: 740px) {
@@ -65,6 +61,6 @@
     }
 
     .forChange {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     } 
 }
