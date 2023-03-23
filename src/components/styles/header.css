@@ -31,6 +31,10 @@
     font-size: 3rem;
 }
 
+.intro-h {
+    height: 30px;
+}
+
 .forChange {
     font-family: 'Dancing Script', cursive;
     font-size: 2.2rem;
