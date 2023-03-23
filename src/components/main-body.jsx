@@ -1,5 +1,6 @@
 import React from 'react'
 import "./styles/main-body.css"
+import contactImg from "./images/contact.png"
 
 export default function Main() {
     return (    
@@ -29,7 +30,15 @@ export default function Main() {
                 <h2>Projects i builded</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A voluptatum doloremque nam! Earum, necessitatibus repudiandae. Vero atque modi tenetur eaque commodi! Saepe molestias debitis dolorum omnis delectus. Voluptatibus, cupiditate nulla!</p>
             </div>
-
+            <div className="contact">
+              <div className="info-contact">
+                  <h1>CONTACT ME</h1>
+                  <h3>Phone: 444 444 444</h3>
+                  <h3>Email: noemail@noemail.no</h3>
+                  <h3>Social Media: I don't know</h3>
+              </div>
+              <img src={contactImg} className="contact-img" alt="" srcSet="" />
+            </div>
         </main>
     )
 }

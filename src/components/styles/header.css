@@ -28,9 +28,39 @@
 
 .introduction > h1 {
     font-family: var(--Right-font);
+    font-size: 3rem;
 }
 
-.introduction > h4 {
+.forChange {
     font-family: 'Dancing Script', cursive;
-    font-size: 1.7rem;
+    font-size: 2.2rem;
+    display: inline-block;
+}
+
+@media (max-width: 1800px) {
+    .introduction {
+        grid-column: 4 / 7;
+    }
+
+    /* .introduction > h1 {
+        font-size: 2rem;
+    }
+
+    .forChange {
+        font-size: 1.5rem;
+    } */
+}
+
+@media (max-width: 740px) {
+    .introduction > h1 {
+        font-size: 2rem;
+    }
+
+    .introduction {
+        grid-column: 4 / 8;
+    }
+
+    .forChange {
+        font-size: 1.5rem;
+    } 
 }
