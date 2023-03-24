@@ -151,4 +151,18 @@ main {
       font-size: 25px;
       list-style:symbols(cyclic "\1F4A7");
   }
+
+  .contact {
+    padding-left: 10%;
+    font-size: 15px;
+    background-color: inherit;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .info-contact > h1 {
+    grid-column: 1 / 3;
+    font-size: 25px;
+    font-family: var(--Right-font);
+}
 }
