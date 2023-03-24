@@ -9,9 +9,10 @@
 :root {
     --anton-font: 'Anton', sans-serif;
     --dancing-font: 'Dancing Script', cursive;
-    --Right-font: 'Righteous', cursive;
-    --header-dark-green: #33bdb2;
-    --main-color: #99f6e4;
+    --Right-font: 'Righteous', monospace;
+    --header-dark-green: #051622;
+    --font-color: #DEB992;
+    --main-color: #1BA098;
 }
 
 html {

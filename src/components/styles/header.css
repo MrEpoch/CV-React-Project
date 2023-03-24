@@ -1,4 +1,5 @@
 .header-react {
+    color: var(--font-color);
     background-color: var(--header-dark-green);
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -12,7 +13,7 @@
 
 .photo > img {
     border-radius: 10px;
-    border: 7px solid #bef264;
+    border: 7px solid var(--font-color);
     width: 200px;
     height: 200px;
 }
@@ -27,6 +28,7 @@
 }
 
 .introduction > h4 {
+    font-family: monospace;
     font-size: 1.5rem;
 }
 
@@ -63,4 +65,22 @@
     .forChange {
         font-size: 1.2rem;
     } 
+}
+
+@media (max-width: 540px) {
+      .introduction > h1 {
+        font-size: 1rem;
+    }
+
+    .introduction {
+        grid-column: 4 / 8;
+    }
+
+    .forChange {
+        font-size: 0.6rem;
+    } 
+    .photo > img {
+        width: 120px;
+        height: 120px;
+    }
 }
