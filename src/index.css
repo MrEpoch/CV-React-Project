@@ -11,9 +11,11 @@
     --dancing-font: 'Dancing Script', cursive;
     --Right-font: 'Righteous', monospace;
     --header-dark-green: #051622;
-    --font-color: #DEB992;
+    --font-color: #369aff;
     --main-color: #1BA098;
 }
+
+/* #e2e78b */
 
 html {
     width: 100%;
